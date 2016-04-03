@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RnmViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class RNMViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class RnmViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier(kReuseIdentifier) as! RnmCustomInputTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kReuseIdentifier) as! RNMCustomInputTableViewCell
         cell.representedObject = self
         return cell
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RnmCustomInputTableViewCell: UITableViewCell {
+class RNMCustomInputTableViewCell: UITableViewCell {
     @IBOutlet weak var inputText : UITextField?
     @IBOutlet weak var outPutText : UITextField?
     var representedObject : AnyObject? = nil
@@ -28,8 +28,10 @@ class RnmCustomInputTableViewCell: UITableViewCell {
     
     func validateCharactersFromString(inputValue : String){
         var mutableStrList  = [AnyObject]()
-        var valid : Bool? = true
-        for (var char = 0 ; char < inputValue.characters.count; char++){
+        var valid  = true
+//        for (var char = 0 ; char < inputValue.characters.count; char++){
+        for char in (0..<inputValue.characters.count){
+            print(char)
             let keyCharacter = inputValue[char]
             mutableStrList.append(String(keyCharacter))
             var filteredList : [AnyObject]?
@@ -82,7 +84,8 @@ class RnmCustomInputTableViewCell: UITableViewCell {
         if (valid == true){
             var totalValue = 0
             let strCount = mutableStrList.count
-            for (var i = 0; i < strCount; i++){
+//            for (var i = 0; i < strCount; i++){
+            for i in (0..<strCount){
                 var j = i + 1
                 if (j >= strCount){
                     j = i;
@@ -118,7 +121,7 @@ class RnmCustomInputTableViewCell: UITableViewCell {
     
     func validateTwoOrMoreSmallerNumberInFrontLargerNumber(smallNumber : [AnyObject]) -> Bool{
         var tempArray : [AnyObject] = smallNumber
-        var isValid : Bool = true
+        var isValid = true
         if (tempArray.count == 0){
              isValid = false
         }
@@ -128,7 +131,8 @@ class RnmCustomInputTableViewCell: UITableViewCell {
                 let lastObj : String = tempArray.last as! String
                 let lastInteger : Int? = self.romanDictionary[lastObj]
                 var integerCount = 0;
-                for (var i = 0; i<tempCount ; i++){
+//                for (var i = 0; i<tempCount ; i++){
+                for i in (0...tempCount){
                     let charStr : String = tempArray[i] as! String
                     let tempInteger : Int? = self.romanDictionary[charStr]
                     if (tempInteger < lastInteger){
@@ -151,8 +155,8 @@ class RnmCustomInputTableViewCell: UITableViewCell {
         let valueCount = 13
         let values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
         var numeralString = ""
-        for (var j = 0; j < valueCount; j++)
-        {
+//        for (var j = 0; j < valueCount; j++)
+        for j in (0..<valueCount){
             while (n >= values[j])
             {
                 n = n - values[j];
@@ -168,7 +172,7 @@ class RnmCustomInputTableViewCell: UITableViewCell {
         let formattedString : String = NSString(format: "%@ is not a valid input",(trimmedString)!) as String
         let alertController  = UIAlertController(title: kApplicationName, message: (trimmedString!.characters.count > 0) ? formattedString : kNoData, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: kOkButton, style: UIAlertActionStyle.Cancel, handler: nil))
-        let viewController = self.representedObject as! RnmViewController
+        let viewController = self.representedObject as! RNMViewController
          viewController.presentViewController(alertController, animated: true, completion:nil)
         self.inputText!.text = kNone;
         self.outPutText!.text = kNone;

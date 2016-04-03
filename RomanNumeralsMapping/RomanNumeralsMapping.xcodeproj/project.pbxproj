@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		972CAF691CAD3C8600DF48F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF681CAD3C8600DF48F6 /* AppDelegate.swift */; };
-		972CAF6B1CAD3C8600DF48F6 /* RnmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF6A1CAD3C8600DF48F6 /* RnmViewController.swift */; };
+		972CAF6B1CAD3C8600DF48F6 /* RNMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF6A1CAD3C8600DF48F6 /* RNMViewController.swift */; };
 		972CAF6E1CAD3C8600DF48F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972CAF6C1CAD3C8600DF48F6 /* Main.storyboard */; };
 		972CAF701CAD3C8600DF48F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 972CAF6F1CAD3C8600DF48F6 /* Assets.xcassets */; };
 		972CAF731CAD3C8600DF48F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972CAF711CAD3C8600DF48F6 /* LaunchScreen.storyboard */; };
 		972CAF7E1CAD3C8700DF48F6 /* RomanNumeralsMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF7D1CAD3C8700DF48F6 /* RomanNumeralsMappingTests.swift */; };
 		972CAF891CAD3C8700DF48F6 /* RomanNumeralsMappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF881CAD3C8700DF48F6 /* RomanNumeralsMappingUITests.swift */; };
-		972CAF971CAD3D8D00DF48F6 /* RnmCustomInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF961CAD3D8D00DF48F6 /* RnmCustomInputTableViewCell.swift */; };
+		972CAF971CAD3D8D00DF48F6 /* RNMCustomInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF961CAD3D8D00DF48F6 /* RNMCustomInputTableViewCell.swift */; };
 		972CAF9A1CAD401100DF48F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAF991CAD401100DF48F6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		972CAF651CAD3C8600DF48F6 /* RomanNumeralsMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RomanNumeralsMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		972CAF681CAD3C8600DF48F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		972CAF6A1CAD3C8600DF48F6 /* RnmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RnmViewController.swift; sourceTree = "<group>"; };
+		972CAF6A1CAD3C8600DF48F6 /* RNMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNMViewController.swift; sourceTree = "<group>"; };
 		972CAF6D1CAD3C8600DF48F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		972CAF6F1CAD3C8600DF48F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		972CAF721CAD3C8600DF48F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		972CAF841CAD3C8700DF48F6 /* RomanNumeralsMappingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralsMappingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		972CAF881CAD3C8700DF48F6 /* RomanNumeralsMappingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsMappingUITests.swift; sourceTree = "<group>"; };
 		972CAF8A1CAD3C8700DF48F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		972CAF961CAD3D8D00DF48F6 /* RnmCustomInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RnmCustomInputTableViewCell.swift; sourceTree = "<group>"; };
+		972CAF961CAD3D8D00DF48F6 /* RNMCustomInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNMCustomInputTableViewCell.swift; sourceTree = "<group>"; };
 		972CAF991CAD401100DF48F6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				972CAF681CAD3C8600DF48F6 /* AppDelegate.swift */,
-				972CAF6A1CAD3C8600DF48F6 /* RnmViewController.swift */,
-				972CAF961CAD3D8D00DF48F6 /* RnmCustomInputTableViewCell.swift */,
+				972CAF6A1CAD3C8600DF48F6 /* RNMViewController.swift */,
+				972CAF961CAD3D8D00DF48F6 /* RNMCustomInputTableViewCell.swift */,
 				972CAF6C1CAD3C8600DF48F6 /* Main.storyboard */,
 				972CAF6F1CAD3C8600DF48F6 /* Assets.xcassets */,
 				972CAF711CAD3C8600DF48F6 /* LaunchScreen.storyboard */,
@@ -262,8 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972CAF6B1CAD3C8600DF48F6 /* RnmViewController.swift in Sources */,
-				972CAF971CAD3D8D00DF48F6 /* RnmCustomInputTableViewCell.swift in Sources */,
+				972CAF6B1CAD3C8600DF48F6 /* RNMViewController.swift in Sources */,
+				972CAF971CAD3D8D00DF48F6 /* RNMCustomInputTableViewCell.swift in Sources */,
 				972CAF691CAD3C8600DF48F6 /* AppDelegate.swift in Sources */,
 				972CAF9A1CAD401100DF48F6 /* Constants.swift in Sources */,
 			);
