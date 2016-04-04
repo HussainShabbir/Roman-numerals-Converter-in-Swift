@@ -29,9 +29,7 @@ class RNMCustomInputTableViewCell: UITableViewCell {
     func validateCharactersFromString(inputValue : String){
         var mutableStrList  = [AnyObject]()
         var valid  = true
-//        for (var char = 0 ; char < inputValue.characters.count; char++){
         for char in (0..<inputValue.characters.count){
-            print(char)
             let keyCharacter = inputValue[char]
             mutableStrList.append(String(keyCharacter))
             var filteredList : [AnyObject]?
@@ -84,7 +82,6 @@ class RNMCustomInputTableViewCell: UITableViewCell {
         if (valid == true){
             var totalValue = 0
             let strCount = mutableStrList.count
-//            for (var i = 0; i < strCount; i++){
             for i in (0..<strCount){
                 var j = i + 1
                 if (j >= strCount){
@@ -131,7 +128,6 @@ class RNMCustomInputTableViewCell: UITableViewCell {
                 let lastObj : String = tempArray.last as! String
                 let lastInteger : Int? = self.romanDictionary[lastObj]
                 var integerCount = 0;
-//                for (var i = 0; i<tempCount ; i++){
                 for i in (0...tempCount){
                     let charStr : String = tempArray[i] as! String
                     let tempInteger : Int? = self.romanDictionary[charStr]
