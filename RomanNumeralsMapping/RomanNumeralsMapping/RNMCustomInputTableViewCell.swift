@@ -11,6 +11,7 @@ import UIKit
 class RNMCustomInputTableViewCell: UITableViewCell {
     @IBOutlet weak var inputText : UITextField?
     @IBOutlet weak var outPutText : UITextField?
+    var shouldDisplayAlert = true
     var representedObject : AnyObject? = nil
     var romanDictionary : [String : Int] = ["M" : 1000, "CM" : 900, "D" : 500, "CD" : 400, "C" : 100, "XC" : 90, "L" : 50, "XL" : 40, "X" : 10, "IX" : 9, "V" : 5, "IV" : 4, "I" : 1];
     
@@ -41,6 +42,7 @@ class RNMCustomInputTableViewCell: UITableViewCell {
                 else{
                     valid = false
                     displayAlert()
+                    guard self.shouldDisplayAlert else { return }
                     break
                 }
             }
@@ -52,6 +54,7 @@ class RNMCustomInputTableViewCell: UITableViewCell {
                 else{
                     valid = false
                     displayAlert()
+                    guard self.shouldDisplayAlert else { return }
                     break
                 }
             }
@@ -64,6 +67,7 @@ class RNMCustomInputTableViewCell: UITableViewCell {
                 else{
                     valid = false
                     displayAlert()
+                    guard self.shouldDisplayAlert else { return }
                     break
                 }
             }
@@ -73,6 +77,7 @@ class RNMCustomInputTableViewCell: UITableViewCell {
             {
                 valid = false
                 displayAlert()
+                guard self.shouldDisplayAlert else { return }
                 break
             }
     }
@@ -106,12 +111,14 @@ class RNMCustomInputTableViewCell: UITableViewCell {
             else{
                 valid = false;
                 displayAlert();
+                guard self.shouldDisplayAlert else { return }
             }
         }
         else
         {
             valid = false;
             displayAlert();
+            guard self.shouldDisplayAlert else { return }
         }
     }
 
@@ -151,7 +158,6 @@ class RNMCustomInputTableViewCell: UITableViewCell {
         let valueCount = 13
         let values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
         var numeralString = ""
-//        for (var j = 0; j < valueCount; j++)
         for j in (0..<valueCount){
             while (n >= values[j])
             {
@@ -168,11 +174,11 @@ class RNMCustomInputTableViewCell: UITableViewCell {
         let formattedString : String = NSString(format: "%@ is not a valid input",(trimmedString)!) as String
         let alertController  = UIAlertController(title: kApplicationName, message: (trimmedString!.characters.count > 0) ? formattedString : kNoData, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: kOkButton, style: UIAlertActionStyle.Cancel, handler: nil))
-        let viewController = self.representedObject as! RNMViewController
-         viewController.presentViewController(alertController, animated: true, completion:nil)
         self.inputText!.text = kNone;
         self.outPutText!.text = kNone;
-        return;
+        let viewController = self.representedObject as! RNMViewController
+         viewController.presentViewController(alertController, animated: true, completion:nil)
+        self.shouldDisplayAlert = false
     }
     
 }
